@@ -1,17 +1,21 @@
 // import css file
-import './FirstComp.css';
+import './ExpenseItem.css';
 
-function FirstComp(){
+function ExpenseItem(){
+    const date = new Date(2023,8,17);
+    const insrnce_head = "Car Insurance";
+    const price = "$294.67";
+
     return(
         // return a only single element
         <div className="expense-item">
-            <div>March 28th 2021</div>
+            <div>{date.toISOString()}</div>
             <div className="expense-item__description">
-                <h2>Car Insurance</h2>
-                <div className="expense-item__price">$294.67</div>
+                <h2>{insrnce_head}</h2>
+                <div className="expense-item__price">{price}</div>
             </div>
         </div>
     );
 }
 
-export default FirstComp;
+export default ExpenseItem;

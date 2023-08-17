@@ -1,8 +1,8 @@
-import FirstComp from './components/ExpenseItem';
+import ExpenseItem from './components/ExpenseItem.js';
 
 function App() {
   return (
-    <FirstComp />
+    <ExpenseItem />
   );
 }
 
