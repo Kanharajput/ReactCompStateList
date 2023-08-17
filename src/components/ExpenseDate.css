@@ -1,0 +1,9 @@
+.expense_date{
+    border: 2px solid white;
+    border-radius: 10px;
+    background: black;
+}
+
+h2{
+    text-align:center;
+}
