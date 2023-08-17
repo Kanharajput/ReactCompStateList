@@ -15,3 +15,15 @@
     - 'tag component' will only show the content which is wrapped inside it when this code is added to root 
         element. code -> {props.children} . It will declare that all code wrapped inside the 'tag component' is 
         it's children element.
+
+- Why jsx only return a single element.
+    - Because jsx under the hood use react library to create the element. And that library creates the element
+    this way
+    ```
+        React.createElement('div',{here comes attibutes},
+                            React.createElement('h2',{},'lets get started'),
+                            React.createElement('p',{},'understand or not)
+                            )
+    ```
+    That's why can't return more than one element because behind the scene the code which transfers jsx into 
+    html will wrap all elements into a single wrapper element and renders it.
