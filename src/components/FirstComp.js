@@ -1,6 +1,11 @@
 function FirstComp(){
     return(
-        <h2>Coming from first component</h2>
+        // return a only single element
+        <div>
+            <h1>Kanha's Blog</h1>
+            <p>Today I wanna eat some tasty.</p>
+            <p>God bless me with some tasty food</p>
+        </div>
     );
 }
 
