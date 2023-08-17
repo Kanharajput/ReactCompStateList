@@ -1,8 +1,8 @@
+import FirstComp from './components/FirstComp';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hi, It's me your boss.</h1>
-    </div>
+    <FirstComp />
   );
 }
 
