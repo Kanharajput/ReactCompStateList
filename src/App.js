@@ -1,4 +1,4 @@
-import FirstComp from './components/FirstComp';
+import FirstComp from './components/ExpenseItem';
 
 function App() {
   return (
