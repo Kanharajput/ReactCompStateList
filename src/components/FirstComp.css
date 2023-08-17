@@ -1,0 +1,14 @@
+.blog{
+    width: 200px;
+    margin: 0 auto;
+    border: 2px solid yellow;
+    box-shadow: 2px 2px 2px black;
+}
+
+.blog h1{
+    color: red;
+}
+
+.blog p{
+    color: green;
+}
