@@ -32,3 +32,6 @@
 Basically react js handle all the events which are in js DOM.
 > One thing to remember is that react js is descriptive so that we won't select an element and add listener on it.
     While we add onclick method in jsx which takes a function which runs when that event execute.
+
+- Normally when we change a variable value in react js it will not change it on the ui. For that we have to state hooks
+    which re render the component on which the state is changed.
