@@ -40,3 +40,17 @@ Basically react js handle all the events which are in js DOM.
     when there's a change in the field. Just a single keystroke also let to run.
     - Also the function which we use to handle this event will automatically an a event as a arguement to get the value out
         of it.
+    
+- If a component has mulitple states then there's a way to write them a single state 
+```
+const [useInput, setUserInput] = useState({
+                                    title: '',
+                                    amount: '',
+                                    date: ''
+                                });
+```
+
+    - But one thing not here is that each time a state is updated we have to declare all the states again 
+        which are not changed otherwise they will lost. Check code in commits.
+    - One more way is there to pass the handle multi states by a hook. React will add prevState paramerter
+        to handling state so that it can acquire previous states of variables which are not changed now.
