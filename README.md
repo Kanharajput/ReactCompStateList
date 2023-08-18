@@ -54,3 +54,14 @@ const [useInput, setUserInput] = useState({
         which are not changed otherwise they will lost. Check code in commits.
     - One more way is there to pass the handle multi states by a hook. React will add prevState paramerter
         to handling state so that it can acquire previous states of variables which are not changed now.
+
+    - Let's suppose there is single state which we want to update and we need the previous value of it
+        then react js by default provide it in the variable name like prevState(here State is the name of
+        of variable which used inside the state) using this we can get the previous value of this state.
+        But this value is only provide in the function's parameter of the function which is passed as a parameter to change the state of function.
+        ```
+        const [counter, setCounter] = useState(0);
+        function handleClick(){
+            setCounter(prevCounter => prevCounter + 1)
+        }
+        ```
