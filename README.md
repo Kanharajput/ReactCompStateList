@@ -69,3 +69,12 @@ const [useInput, setUserInput] = useState({
 
 - Handle all events by just a single function. Basically onChange(or any event listener) function provide 
     event to function parameter which is going to handle that function. So we created a anonymous function and get the value from that event and call a modified function for that function.
+
+### How to send data from child component to parent
+- This is done with the helps of function
+- A function is defined in parent component and function is passed as a props to child component.
+- Then child call that function and that function mostly or always has parameters through which that data is
+    reached to parent component.
+- And this cycle is moved to the component on which we want to sent the data
+- Remember we can't skip the component which are in between of the child component to parent component
+    (component on which we want to send data)

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './ExpenseForm.css';
 
-function ExpenseForm(){
+function ExpenseForm(props){
     // states to store the user inputs
     // const [enteredTitle, setEnteredTitle] = useState('');
 
@@ -14,21 +14,18 @@ function ExpenseForm(){
             setUserInput((prevState) => {
                 return ({ ...prevState, title: value });
             });
-            console.log(value);
         }
         else if(identifier === 'amount'){
             setUserInput({
                 ...userInput,
                 amount: value
             });
-            console.log(value);
         }
         else{
             setUserInput({
                 ...userInput,
                 date: value
             });
-            console.log(value);
         }
     }
 
@@ -41,6 +38,9 @@ function ExpenseForm(){
         setUserInput(()=>{
             return({title: '', amount:'',date:''})
         });
+
+        // send expense to upper component that is NewExpense
+        props.onFormSubmit(userInput);
     }
 
     return(
