@@ -1,3 +1,4 @@
+# if don't understand what is happening revisit the repo JsForReact https://github.com/Kanharajput/JsForReact
 # some code deleted as we moved on so check the commits to watch the code of a particular topic.
 - A single component will return a single element. Means everything which is return by a component must be wrapped inside 
     a div.
@@ -65,3 +66,6 @@ const [useInput, setUserInput] = useState({
             setCounter(prevCounter => prevCounter + 1)
         }
         ```
+
+- Handle all events by just a single function. Basically onChange(or any event listener) function provide 
+    event to function parameter which is going to handle that function. So we created a anonymous function and get the value from that event and call a modified function for that function.
