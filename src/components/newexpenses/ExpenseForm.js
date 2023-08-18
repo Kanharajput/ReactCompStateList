@@ -32,24 +32,35 @@ function ExpenseForm(){
         }
     }
 
+    const submitHandler = (event) =>{
+        // by default submit will sent request to server to prevent that prevent all defaults.
+        event.preventDefault();
+        console.log(userInput);
+        // must needed to add value tag in form input field 
+        // to make them empty when form submit
+        setUserInput(()=>{
+            return({title: '', amount:'',date:''})
+        });
+    }
+
     return(
-        <form>
+        <form onSubmit={submitHandler}>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label htmlFor="title-field">Enter title</label>
-                    <input name="title-field" type="text" 
+                    <input name="title-field" type="text" value={userInput.title}
                         onChange={(event) => allHandler('title',event.target.value)}>
                     </input>
                 </div>
                 <div className="new-expense__control">
                     <label htmlFor="date-field">Enter Amout</label>
-                    <input name="date-field" type="number" 
+                    <input name="date-field" type="number" value={userInput.amount}
                         onChange={(event) => allHandler('amount', event.target.value)}>
                     </input>
                 </div>
                 <div className="new-expense__control">
                     <label htmlFor="date-field">Enter Date</label>
-                    <input name="date-field" type="date" 
+                    <input name="date-field" type="date"value={userInput.date}
                         onChange={(event) => allHandler('date', event.target.value)}>
                     </input>
                 </div>
