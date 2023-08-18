@@ -35,3 +35,8 @@ Basically react js handle all the events which are in js DOM.
 
 - Normally when we change a variable value in react js it will not change it on the ui. For that we have to state hooks
     which re render the component on which the state is changed.
+
+- We can take the input of the user when he entered in a field by a event handler 'onChange' . This event will call each
+    when there's a change in the field. Just a single keystroke also let to run.
+    - Also the function which we use to handle this event will automatically an a event as a arguement to get the value out
+        of it.
