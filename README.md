@@ -85,3 +85,7 @@ const [useInput, setUserInput] = useState({
 
 - The components which don't have any state are known as stateless components and the components with a state are known
     as statefull component.
+
+## Rendering list and conditional content
+- To out list content js list has map method. This map methods take a function and pass each item of the list to that
+    function and the function can make changes according to it.
