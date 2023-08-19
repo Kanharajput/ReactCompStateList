@@ -78,3 +78,10 @@ const [useInput, setUserInput] = useState({
 - And this cycle is moved to the component on which we want to sent the data
 - Remember we can't skip the component which are in between of the child component to parent component
     (component on which we want to send data)
+
+
+- Some values which are depend on the state so we can use derived and computed state to change those values
+    when a state is changed. => https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/38345450#overview
+
+- The components which don't have any state are known as stateless components and the components with a state are known
+    as statefull component.
