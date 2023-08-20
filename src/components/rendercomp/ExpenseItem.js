@@ -1,7 +1,7 @@
 // import css file
-import './ExpenseItem.css';
+import './css/ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
-import Card from './Card';
+import Card from './../ui/Card';
 
 // all data which we sended by the app component is gathered in one object called properties(props)
 // extract the desired data

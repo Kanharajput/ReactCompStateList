@@ -1,5 +1,5 @@
-import ExpenseItem from './components/ExpenseItem';
-import Card from './components/Card';
+import ExpenseItem from './components/rendercomp/ExpenseItem'
+import Card from './components/ui/Card';
 import NewExpense from './components/newexpenses/NewExpense';
 import {useState} from 'react';
 

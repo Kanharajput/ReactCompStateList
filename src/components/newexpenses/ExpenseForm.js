@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './ExpenseForm.css';
+import './css/ExpenseForm.css';
 
 function ExpenseForm(props){
     // states to store the user inputs
