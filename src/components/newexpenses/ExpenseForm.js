@@ -32,15 +32,20 @@ function ExpenseForm(props){
     const submitHandler = (event) =>{
         // by default submit will sent request to server to prevent that prevent all defaults.
         event.preventDefault();
-        console.log(userInput);
+
         // must needed to add value tag in form input field 
         // to make them empty when form submit
         setUserInput(()=>{
-            return({title: '', amount:'',date:''})
+            return({title: '', amount:'',date:''});
         });
-
-        // send expense to upper component that is NewExpense
-        props.onFormSubmit(userInput);
+        
+        const new_expense = {
+            id: 1,
+            title: userInput.title,
+            amount: userInput.amount,
+            date: new Date(userInput.date)
+        };
+        props.onFormSubmit(new_expense);
     }
 
     return(
