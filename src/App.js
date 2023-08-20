@@ -2,6 +2,8 @@ import ExpenseItem from './components/rendercomp/ExpenseItem'
 import Card from './components/ui/Card';
 import NewExpense from './components/newexpenses/NewExpense';
 import {useState} from 'react';
+import FilterExpense from './components/filterexpenses/FilterExpense';
+
 
 const initial_expenses = [
   {
@@ -38,9 +40,15 @@ function App() {
     setExpenses([expense, ...expenses]);
   }
 
+  function getSelectYear(selectedYear){
+    console.log(selectedYear);
+  }
+
+
   return (
     <Card>
       <NewExpense passExpense={getExpenseFromNewExpense}/>
+      <FilterExpense onChangeFilter={getSelectYear}/>
       {/* map method extract each item of list and let us modify that modify to create something new */}
       {expenses.map((expense) => (<ExpenseItem title={expense.title} amount={expense.amount} date={expense.date}/>))}
     </Card>
