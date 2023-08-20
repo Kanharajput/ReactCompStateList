@@ -2,11 +2,12 @@ import './FilterExpense.css';
 
 function FilterExpense(props){
 
+    // sending back data to component which called it
+    // to filter the data according to selected year
     const handleDropDown = (event) => {
         props.onChangeFilter(event.target.value);
     }
-
-    
+ 
     return(
         <div className="expense-filter">
             <div className="expense-filter__control">

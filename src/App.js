@@ -35,20 +35,35 @@ const initial_expenses = [
 
 function App() {  
   const [expenses, setExpenses] = useState(initial_expenses);
+  const [defaultYear, setSeletedYear] = useState(2020);
+  let hidden_year = '2021, 2022 & 2023';
 
   const getExpenseFromNewExpense = (expense) => {
     setExpenses([expense, ...expenses]);
   }
 
-  function getSelectYear(selectedYear){
-    console.log(selectedYear);
+  // this is example of derived or computed state
+  // means something which is depend on state, if the state is changed
+  // it will also change and also rendered on the ui
+  if (defaultYear === '2021') {
+    hidden_year = '2020, 2022 & 2023';
+  }
+  else if (defaultYear === '2022') {
+    hidden_year = '2020, 2021 & 2023';
+  }
+  else {
+    hidden_year = '2020, 2021 & 2022';
   }
 
+  function getSelectYear(selectedYear){
+    setSeletedYear(selectedYear);
+  }
 
   return (
     <Card>
       <NewExpense passExpense={getExpenseFromNewExpense}/>
-      <FilterExpense onChangeFilter={getSelectYear}/>
+      <FilterExpense default = {defaultYear} onChangeFilter={getSelectYear}/>
+      <p>This years are hidden {hidden_year}</p>
       {/* map method extract each item of list and let us modify that modify to create something new */}
       {expenses.map((expense) => (<ExpenseItem title={expense.title} amount={expense.amount} date={expense.date}/>))}
     </Card>
