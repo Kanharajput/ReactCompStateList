@@ -101,3 +101,10 @@ const [useInput, setUserInput] = useState({
 
 - we can have as many return a function as we want but the condition is that only one should execute at a time. 
     means all should show a different condition.
+
+- Passing style dynamically. From js file to css
+    Here in react js styles are passes as a js object
+    ```
+    style={{background: "red"}}
+    ```
+    Outer curly is for dynamic values, inside curly is the object
