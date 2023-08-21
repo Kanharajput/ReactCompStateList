@@ -1,5 +1,5 @@
-# if don't understand what is happening revisit the repo JsForReact https://github.com/Kanharajput/JsForReact
-# some code deleted as we moved on so check the commits to watch the code of a particular topic.
+## if don't understand what is happening revisit the repo JsForReact https://github.com/Kanharajput/JsForReact
+## some code deleted as we moved on so check the commits to watch the code of a particular topic.
 - A single component will return a single element. Means everything which is return by a component must be wrapped inside 
     a div.
 
@@ -29,7 +29,7 @@
     That's why can't return more than one element because behind the scene the code which transfers jsx into 
     html will wrap all elements into a single wrapper element and renders it.
 
-# Now Start with Events
+### Now Start with Events
 Basically react js handle all the events which are in js DOM.
 > One thing to remember is that react js is descriptive so that we won't select an element and add listener on it.
     While we add onclick method in jsx which takes a function which runs when that event execute.
@@ -51,21 +51,21 @@ const [useInput, setUserInput] = useState({
                                 });
 ```
 
-    - But one thing not here is that each time a state is updated we have to declare all the states again 
-        which are not changed otherwise they will lost. Check code in commits.
-    - One more way is there to pass the handle multi states by a hook. React will add prevState paramerter
-        to handling state so that it can acquire previous states of variables which are not changed now.
+- But one thing not here is that each time a state is updated we have to declare all the states again 
+    which are not changed otherwise they will lost. Check code in commits.
+- One more way is there to pass the handle multi states by a hook. React will add prevState paramerter
+    to handling state so that it can acquire previous states of variables which are not changed now.
 
-    - Let's suppose there is single state which we want to update and we need the previous value of it
-        then react js by default provide it in the variable name like prevState(here State is the name of
-        of variable which used inside the state) using this we can get the previous value of this state.
-        But this value is only provide in the function's parameter of the function which is passed as a parameter to change the state of function.
-        ```
-        const [counter, setCounter] = useState(0);
-        function handleClick(){
-            setCounter(prevCounter => prevCounter + 1)
-        }
-        ```
+- Let's suppose there is single state which we want to update and we need the previous value of it
+    then react js by default provide it in the variable name like prevState(here State is the name of
+    of variable which used inside the state) using this we can get the previous value of this state.
+    But this value is only provide in the function's parameter of the function which is passed as a parameter to change the state of function.
+    ```
+    const [counter, setCounter] = useState(0);
+    function handleClick(){
+        setCounter(prevCounter => prevCounter + 1)
+    }
+    ```
 
 - Handle all events by just a single function. Basically onChange(or any event listener) function provide 
     event to function parameter which is going to handle that function. So we created a anonymous function and get the value from that event and call a modified function for that function.
