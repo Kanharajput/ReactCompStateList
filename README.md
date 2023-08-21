@@ -98,3 +98,6 @@ const [useInput, setUserInput] = useState({
     expenses.length === 0 && (<ExpenseItem>)
     ```
     - create a variable assign jsx to it and check condition using if and change the value of that variable.
+
+- we can have as many return a function as we want but the condition is that only one should execute at a time. 
+    means all should show a different condition.
