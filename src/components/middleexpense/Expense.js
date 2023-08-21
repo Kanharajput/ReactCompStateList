@@ -14,17 +14,19 @@ function Expense(props){
     const filteredExpenses = props.items.filter(expense => 
         expense.date.getFullYear().toString() === defaultYear)
 
+    // conditions for rendering expenses
+    let expenseToRender = <p>Congrats no expense this year</p>;
+    if(filteredExpenses.length > 0){
+        expenseToRender = filteredExpenses.map((expense) => (<ExpenseItem
+                            title={expense.title}
+                            amount={expense.amount}
+                            date={expense.date} />));
+    }
+
     return (
         <Card>
             <FilterExpense default={defaultYear} onChangeFilter={getSelectYear} />
-            {filteredExpenses.length === 0 && (<p>Sorry no items list have only one item</p>)} 
-            {filteredExpenses.length > 0 && (
-                filteredExpenses.map((expense) => (<ExpenseItem
-                    title={expense.title}
-                    amount={expense.amount}
-                    date={expense.date} />))
-            )}
-            
+            {expenseToRender}
         </Card>
     );
 }
