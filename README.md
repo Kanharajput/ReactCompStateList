@@ -89,3 +89,12 @@ const [useInput, setUserInput] = useState({
 ## Rendering list and conditional content
 - To out list content js list has map method. This map methods take a function and pass each item of the list to that
     function and the function can make changes according to it.
+
+- CONDITION IN JSX
+    - Three ways to write conditions
+    - Using normal js ternary operator
+    - using && . if the condition is true then it will run what after &&
+    ```
+    expenses.length === 0 && (<ExpenseItem>)
+    ```
+    - create a variable assign jsx to it and check condition using if and change the value of that variable.

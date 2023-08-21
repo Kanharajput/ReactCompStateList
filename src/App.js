@@ -19,7 +19,7 @@ const initial_expenses = [
     id: 'e3',
     title: 'Car Insurance',
     amount: 294.67,
-    date: new Date(2022, 8, 17)
+    date: new Date(2020, 8, 17)
   },
   {
     id: 'e4',

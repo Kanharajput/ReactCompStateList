@@ -17,10 +17,13 @@ function Expense(props){
     return (
         <Card>
             <FilterExpense default={defaultYear} onChangeFilter={getSelectYear} />
-            {filteredExpenses.map((expense) => (<ExpenseItem 
-                                                            title={expense.title} 
-                                                            amount={expense.amount} 
-                                                            date={expense.date} />))}
+            {filteredExpenses.length > 1 ? (
+                filteredExpenses.map((expense) => (<ExpenseItem
+                    title={expense.title}
+                    amount={expense.amount}
+                    date={expense.date} />))
+            ): <p>Sorry no items list have only one item</p> }
+            
         </Card>
     );
 }
