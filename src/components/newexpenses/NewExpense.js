@@ -2,9 +2,10 @@ import './css/NewExpense.css';
 import ExpenseForm from './ExpenseForm';
 
 function NewExpense(props){
+
+
     // this expense is arriving from ExpenseForm
     const getNewExpense = (expense) => {
-        console.log(expense);
         props.passExpense(expense);
     };
 
